@@ -1,0 +1,12 @@
+node_modules
+.next
+.husky
+coverage
+.prettierignore
+.stylelintignore
+stories
+storybook-static
+playwright-report
+.nyc_output
+test-results
+junit.xml
