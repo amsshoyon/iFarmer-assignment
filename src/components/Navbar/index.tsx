@@ -9,7 +9,7 @@ const navMenus = [
   },
   {
     label: "Product App",
-    href: "/"
+    href: "/products"
   }
 ]
 
