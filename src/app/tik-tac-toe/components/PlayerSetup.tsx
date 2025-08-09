@@ -3,14 +3,13 @@ import { useState } from "react"
 import { useAppDispatch } from "@/store"
 import { startGame } from "@/store/slices/gameSlice"
 
-const PlayerSetup = ({ onSetup }: { onSetup: () => void }) => {
+const PlayerSetup = () => {
   const [player1, setPlayer1] = useState("")
   const [player2, setPlayer2] = useState("")
   const dispatch = useAppDispatch()
 
   const handleStart = () => {
     dispatch(startGame({ player1, player2 }))
-    onSetup()
   }
 
   return (

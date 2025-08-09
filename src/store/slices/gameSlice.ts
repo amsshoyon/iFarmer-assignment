@@ -71,8 +71,7 @@ const gameSlice = createSlice({
     makeMove(state, action: PayloadAction<number>) {
       const idx = action.payload
       if (state.matchOver || state.board[idx]) return
-      const symbol = state.players[state.currentPlayer].symbol
-      state.board[idx] = symbol
+      state.board[idx] = state.players[state.currentPlayer].symbol
 
       const winnerSymbol = checkWinner(state.board)
       if (winnerSymbol) {
@@ -102,7 +101,7 @@ const gameSlice = createSlice({
       state.currentPlayer = state.round % 2 === 1 ? 0 : 1
     },
     resetGame() {
-      return initialState
+      return { ...initialState }
     }
   }
 })

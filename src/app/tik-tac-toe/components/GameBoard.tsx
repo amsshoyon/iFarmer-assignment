@@ -1,12 +1,10 @@
 import React, { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "@/store"
-import { useRouter } from "next/navigation"
 import { makeMove, rematch, resetBoard, startNewMatch } from "@/store/slices/gameSlice"
 
 const GameBoard = () => {
   const { board, currentPlayer, players, round, matchOver } = useAppSelector((state) => state.game)
   const dispatch = useAppDispatch()
-  const router = useRouter()
 
   const handleClick = (idx: number) => {
     if (matchOver || board[idx]) return

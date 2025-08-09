@@ -5,7 +5,7 @@ import Link from "next/link"
 const navMenus = [
   {
     label: "Tic-Tac-Toe",
-    href: "/tik-tak-toe"
+    href: "/tik-tac-toe"
   },
   {
     label: "Product App",
